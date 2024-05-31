@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <!-- ------------  ------ Pacifico font  -    ----------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!-- -------------------------------------- -->
+<!-- ------------------Righteous font------------------------------- -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<!-- --------------------------------------------------------------- -->
+
+<!-- ----------------------PT Sans Caption font----------------------- -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+<!-- ------------------------------------------------------------------- -->
+
+<!--=================================Bree Seri font===================================  -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+<!-- ------------------------------------------------------------------------>
+
+    <link rel="icon" href="bookmark_icon/bookmark-with-color-icon-color-white.png">
+        <!-- ----bootstrap file ------- -->
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+           
+<!--   fontawesome file -->
+<link rel="stylesheet" href="./css/all.min.css">
+
+    <!-- ----css file ------- -->
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body  >
+    <!-- --------------------error massage html--------------------------- -->
+  
+    <div class=" layer hidden "id="layer_Id">
+        <div class="error_square ">
+        <div class="d-flex align-items-center justify-content-between ">
+            <div class="three_circles  d-flex flex-nowrap justify-content-start align-items-start "> 
+                <div class="colored-circle bg-danger"></div>
+                <div class="colored-circle bg-warning mx-2"></div>
+                <div class="colored-circle bg-success"></div>
+
+            </div>
+            <div class="">
+                <button id="close_icon_Id" onclick="closeMassage()" class="close-icon">
+                    <i class="fa-solid fa-xmark close-icon"></i>
+                </button>
+               
+            </div>
+        </div>
+
+        <p class="h5 mt-3 massage-p">
+            Site Name or Url is not valid, Please follow the rules below :
+        </p>
+
+        <ol class="ms-0 ps-2 my-2 py-2">
+            <li  ><i class="fa-solid fa-circle-arrow-right "></i>
+                Site name must contain at least 3 characters
+            </li>
+            <li class="pt-2">
+                <i class="fa-solid fa-circle-arrow-right"></i>
+                Site URL must be a valid one
+            </li>
+          </ol>
+        </div>
+      
+    </div>
+  
+   <!-- ------------------------------------------------------------------- -->
+
+     <div class=" main d-flex justify-content-center align-items-center  mt-1  pt-3 pb-1 flex-column  ">
+
+        <div class="title px-1 my-2  py-3  container d-flex justify-content-center align-items-center  ">
+            <h1> BooKMarker </h1>
+        </div>
+ 
+        <div class="div-border  container py-3  ">
+         <div class=" d-flex flex-nowrap  justify-content-center py-2  px-2 align-items-center  ">
+             <h2 class="gradient_text  "> 
+              <i class="fa-solid fa-bookmark "></i>
+              Bookmark your favorite sites
+              <i class="fa-solid fa-bookmark "></i>
+             </h2>
+                
+             </div>
+      
+             <div class="d-flex ps-0 flex-wrap container ps-3 justify-content-lg-start mx-2  align-items-center  ">
+              <label for="" class="  ">
+                  <i class="fa-solid fa-bookmark  my-1 pe-1 ps-1  fw-bold "></i>
+                  Site Name
+                 </label>
+                 <!-- <input oninput="validationName()" id="inputName" type="text" placeholder="Bookmark Name" class="form-control mt-1 "  /> -->
+
+                 <input  id="inputName" type="text" placeholder="Bookmark Name" class="form-control mt-1 "  />
+      
+                 <label for="" class="  mt-3 ">
+                  <i class="fa-solid fa-link  my-1 pe-1 ps-1 fw-bold "></i>
+                  Website URL
+                 </label>
+                 <input oninput="validationUrl()" id="inputUrl" type="text" placeholder="Website URL" class="form-control mt-1  mb-3 "  />
+      
+             
+             </div>
+
+             <!-- -------------------submit btn-------------------- -->
+             <div class="d-flex flex-nowrap  justify-content-center my-1 ">
+                <button id="submit_btn_id" class="submit_btn " onclick="add()">Submit</button>
+            </div>
+             <!-- ----------------------------------------------------------- -->
+            
+        </div>
+ 
+        <table class=" container table table_color text-center  py-3 mt-4 ">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+
+            <tbody id="tbody_id">
+         
+         
+            </tbody>
+        </table>       
+
+     </div>
+ 
+   
+
+
+
+     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
